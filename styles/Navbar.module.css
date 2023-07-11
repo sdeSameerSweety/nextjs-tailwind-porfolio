@@ -20,7 +20,8 @@
 
 .navLinks {
   display: flex;
-  align-items: right;
+  align-items: center;
+  justify-content: flex-end; /* Align links to the right */
 }
 
 .navLinks a {
@@ -40,4 +41,26 @@
 
 .cvLink:hover {
   text-decoration: underline;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navContainer {
+    flex-direction: column; /* Stack elements vertically on small screens */
+    align-items: flex-start; /* Align items to the left */
+    padding: 10px;
+  }
+
+  .navLinks {
+    margin-top: 10px; /* Add some spacing between links */
+    justify-content: flex-start; /* Align links to the left */
+  }
+
+  .navLinks a {
+    margin: 5px 0; /* Adjust margin for mobile */
+  }
+
+  .cvLink {
+    margin: 5px 0; /* Adjust margin for mobile */
+  }
 }
