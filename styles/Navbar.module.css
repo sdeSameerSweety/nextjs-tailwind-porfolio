@@ -2,72 +2,75 @@
 
 /* Styling for the navbar */
 .navbar {
-  position: fixed; /* Fix the navbar position */
-  top: 0; /* Position it at the top of the page */
-  left: 0; /* Position it at the left of the page */
-  width: 100%; /* Set the width to 100% of the viewport */
-  background: linear-gradient(to right, #000000, #010213); /* Apply a linear gradient background */
-  z-index: 999; /* Set a high z-index to ensure it appears above other elements */
-  margin: auto; /* Center the navbar horizontally */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to right, #000000, #010213);
+  z-index: 999;
 }
 
 /* Styling for the container within the navbar */
 .navContainer {
-  display: flex; /* Use flexbox for layout */
-  align-items: center; /* Align items vertically in the center */
-  justify-content: space-between; /* Distribute space evenly between items */
-  max-width: 1200px; /* Set a maximum width for the container */
-  margin: 0 auto; /* Center the container horizontally within the navbar */
-  padding: 10px 20px; /* Add padding around the container */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
 }
 
 /* Styling for the navigation links within the navbar */
 .navLinks {
-  display: flex; /* Use flexbox for layout */
-  align-items: center; /* Align items vertically in the center */
-  justify-content: flex-end; /* Align links to the right */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 /* Styling for individual navigation links */
 .navLinks a {
-  margin-left: 20px; /* Add left margin between links */
-  color: #ffffff; /* Set text color to white */
-  text-decoration: none; /* Remove underline from links */
-  font-weight: bold; /* Set font weight to bold */
+  margin-left: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* Styling for the CV link within the navbar */
 .cvLink {
-  margin-left: 20px; /* Add left margin to the CV link */
-  color: #ffffff; /* Set text color to white */
-  text-decoration: none; /* Remove underline from link */
-  font-weight: bold; /* Set font weight to bold */
-  cursor: pointer; /* Change cursor to a pointer on hover */
+  margin-left: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* Styling for the CV link on hover */
 .cvLink:hover {
-  text-decoration: underline; /* Underline the CV link on hover */
+  text-decoration: underline;
 }
 
 /* Media query for mobile styles */
 @media (max-width: 768px) {
+  .navbar {
+    height: auto; /* Make navbar height auto to accommodate the menu items */
+    padding-bottom: 10px; /* Add some padding at the bottom */
+  }
+
   .navContainer {
-    flex-direction: column; /* Stack elements vertically on small screens */
-    align-items: flex-start; /* Align items to the left */
-    padding: 10px; /* Add padding around the container */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
   }
 
   .navLinks {
-    margin-top: 10px; /* Add some spacing between links */
-    justify-content: flex-start; /* Align links to the left */
+    flex-direction: column; /* Stack the links vertically */
   }
 
   .navLinks a {
-    margin: 5px 0; /* Adjust margin for mobile */
+    margin: 5px 0;
   }
 
   .cvLink {
-    margin: 5px 0; /* Adjust margin for mobile */
+    margin: 5px 0;
   }
 }
